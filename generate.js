@@ -13,11 +13,11 @@ export default async function handler(req, res) {
                                     const resp = await fetch(process.env.OPENAI_API_BASE + '/chat/completions', {
                                         method: 'POST',
                                             headers: {
-                                                  'Authorization': 'Bearer ' + process.env.OPENAI_API_KEY,
+                                                  'Authorization': 'Bearer ' + process.env.GEMINI_API_KEY,
                                                         'Content-Type': 'application/json'
                                                             },
                                                                 body: JSON.stringify({
-                                                                      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+                                                                      model: process.env.GEMINI_MODEL,
                                                                             temperature: 0.2,
                                                                                   max_tokens: 1200,
                                                                                         messages: [
